@@ -23,6 +23,7 @@
 #include <NTPClient.h>
 #include <WiFiUdp.h>
 #include "../../include/version.h"
+#include <ArduinoJson.h>
 #include <wsData.h>
 
 #define INTERVAL_1MIN (1 * 60 * 1000L)
