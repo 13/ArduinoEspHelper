@@ -136,7 +136,9 @@ void checkWiFi() {
 void connectToWiFi() {
   WiFi.disconnect();
   WiFi.mode(WIFI_STA); // switch off AP
+#if defined(ESP8266)
   WiFi.setAutoConnect(true);
+#endif
   WiFi.setAutoReconnect(true);
   WiFi.hostname(hostname);
   WiFi.begin(wifi_ssid, wifi_pass);
